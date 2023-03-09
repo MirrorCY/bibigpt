@@ -1,0 +1,31 @@
+{
+  "name": "koishi-plugin-bibigpt",
+  "description": "",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "koishi": {
+    "service": {
+      "required": [
+        "gpt"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "koishi": "^4.11.9"
+  },
+  "dependencies": {
+    "@mirror_cy/gpt": "^0.0.1"
+  }
+}
