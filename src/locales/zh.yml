@@ -1,0 +1,20 @@
+commands:
+  bibigpt:
+    description: 让 GPT 帮你总结视频
+    usage: bibigpt <BV号>
+    example: bibigpt BV1nG4y1y7zc
+    messages:
+      prompt:
+        base: |-
+          我希望你以一名专业的视频内容编辑的身份，用中文总结出不超过 5 条视频的内容精华，以 markdown 无序列表的方式返回。请在每句话的最前面加上时间戳（类似 10:24），每句话开头只需要一个开始时间。
+          标题: "{title}"
+          视频字幕: "{subtitles}"
+          
+      no-subtitle: 没有找到字幕哦，可能叔叔还没有生成字幕呢~
+      invalid-bvid: 没有找到这个视频哦，可能是 BV 号写错了呢~
+      loading: |-
+        <plural count={count}>
+          <template>_</template>
+          <template>这么短不自己看？别急在看了</template>
+          <template>视频有点长，共分成{count}段解析中</template>
+        </plural>
